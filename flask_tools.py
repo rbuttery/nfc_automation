@@ -119,6 +119,3 @@ def cook():
 
 if __name__ == '__main__':
    app.run(port=5000)
-
-
-# https://tg7js80g-5000.use.devtunnels.ms/    
