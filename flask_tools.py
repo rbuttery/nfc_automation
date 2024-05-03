@@ -52,6 +52,7 @@ class NotionHabitEvents:
 from flask import Flask
 
 app = Flask(__name__)
+notion = NotionHabitEvents()
 
 @app.route('/')
 def hello():
@@ -59,66 +60,44 @@ def hello():
 
 @app.route('/water')
 def drink_water():
-    notion = NotionHabitEvents()
     notion.add_habit_event(notion.water)
     return 'Water logged!'
 
 @app.route('/weed')
 def smoke_weed():
-    notion = NotionHabitEvents()
     notion.add_habit_event(notion.weed)
     return 'Weed logged!'
 
 @app.route('/eat')
 def eat_meal():
-    notion = NotionHabitEvents()
     notion.add_habit_event(notion.meal)
     return 'Meal logged!'
 
-@app.route('/sleep')
-def sleep():
-    notion = NotionHabitEvents()
-    notion.add_habit_event(notion.sleep)
-    return 'Sleep logged!'
 
 @app.route('/concerta')
 def take_concerta():
-    notion = NotionHabitEvents()
     notion.add_habit_event(notion.concerta)
     return 'Concerta logged!'
 
 @app.route('/wake')
 def wake_up():
-    notion = NotionHabitEvents()
     notion.add_habit_event(notion.wake)
     return 'Woken up logged!'
 
 @app.route('/feed_nova')
 def feed_nova():
-    notion = NotionHabitEvents()
     notion.add_habit_event(notion.feed_nova)
     return 'Fed Nova logged!'
 
-@app.route('/exercise')
-def exercise():
-    notion = NotionHabitEvents()
-    notion.add_habit_event(notion.exercise)
-    return 'Exercise logged!'
-
 @app.route('/clean')
 def clean():
-    notion = NotionHabitEvents()
     notion.add_habit_event(notion.clean)
     return 'Cleaning logged!'
 
 @app.route('/cook')
 def cook():
-    notion = NotionHabitEvents()
     notion.add_habit_event(notion.cook)
     return 'Cooking logged!'
 
 if __name__ == '__main__':
-   app.run(port=5000)
-
-
-# https://tg7js80g-5000.use.devtunnels.ms/    
+   app.run(port=5000) 
