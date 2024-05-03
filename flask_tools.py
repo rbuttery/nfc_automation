@@ -100,4 +100,8 @@ def cook():
     return 'Cooking logged!'
 
 if __name__ == '__main__':
+<<<<<<< HEAD
    app.run(port=5000) 
+=======
+   app.run(port=5000)
+>>>>>>> 4c2235900596e4be8295380957a9190e24a0b567
